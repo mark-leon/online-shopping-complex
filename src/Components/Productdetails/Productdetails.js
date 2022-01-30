@@ -1,20 +1,19 @@
 import React from 'react';
-// import "./Productdetails.css";
+import "./Productdetails.css";
 
 
 const Productdetails = () => {
-  return <div> 
-  {/* <div className="container-fluid mt-2 mb-3">
+  return <div><div className="container-fluid mt-2 mb-3">
       <div className="row no-gutters">
           <div className="col-md-5 pr-2">
-              <div className="card">
+              <div className="newcard">
                   <div className="demo">
                       <ul id="lightSlider">
-                          <li> <img src="img/" /> </li>
+                          <li><img src="img/brian-hall-x5aavOm7PFc-unsplash-removebg-preview.png" /> </li>
                       </ul>
                   </div>
               </div>
-              <div className="card mt-2">
+              <div className="newcard mt-2">
                   <h6>Reviews</h6>
                   <div className="d-flex flex-row">
                       <div className="stars"> <i className="fa fa-star"></i> <i className="fa fa-star"></i> <i className="fa fa-star"></i> <i className="fa fa-star"></i> </div> <span className="ml-1 font-weight-bold">4.6</span>
@@ -44,7 +43,7 @@ const Productdetails = () => {
               </div>
           </div>
           <div className="col-md-7">
-              <div className="card">
+              <div className="newcard">
                   <div className="d-flex flex-row align-items-center">
                       <div className="p-ratings"> <i className="fa fa-star"></i> <i className="fa fa-star"></i> <i className="fa fa-star"></i> <i className="fa fa-star"></i> </div> <span className="ml-1">5.0</span>
                   </div>
@@ -75,41 +74,40 @@ const Productdetails = () => {
                           </div>
                       </div>
                   </div>
-              </div> */}
-              <div className="card mt-2"> <span>Similar items:</span>
+              </div> 
+              <div className="newcard mt-2"> <span>Similar items:</span>
                   <div className="similar-products mt-2 d-flex flex-row">
-                      <div className="card border p-1" style="width: 9rem;margin-right: 3px;"> <img src="img/mnz-OJTNpLmsSHs-unsplash-removebg-preview.png" className="card-img-top" alt="..."/>
-                          <div className="card-body">
+                      <div className="newcard border p-1" style={{width: "9rem", marginRight: "3px"}}> <img src="img/mnz-OJTNpLmsSHs-unsplash-removebg-preview.png" className="new-img-top" style={{display: "block",height: "auto",width: "100%"}} alt="..."/>
+                          <div className="newcard-body">
                               <h6 className="card-title">$1,999</h6>
                           </div>
                       </div>
-                      <div className="card border p-1" style="width: 9rem;margin-right: 3px;"> <img src="img/lucas-george-wendt-3xtCeUhqZWE-unsplash-removebg-preview.png" className="card-img-top" alt="..."/>
-                          <div className="card-body">
+                      <div className="newcard border p-1" style={{width: "9rem", marginRight: "3px"}}> <img src="img/lucas-george-wendt-3xtCeUhqZWE-unsplash-removebg-preview.png" className="new-img-top" style={{display: "block",height: "auto",width: "100%"}} alt="..."/>
+                          <div className="newcard-body">
                               <h6 className="card-title">$1,699</h6>
                           </div>
                       </div>
-                      <div className="card border p-1" style="width: 9rem;margin-right: 3px;"> <img src="img/laura-chouette-_ODRA1MPL1I-unsplash-removebg-preview.png" className="card-img-top" alt="..."/>
-                          <div className="card-body">
+                      <div className="newcard border p-1" style={{width: "9rem", marginRight: "3px"}}> <img src="img/laura-chouette-_ODRA1MPL1I-unsplash-removebg-preview.png" className="new-img-top" style={{display: "block",height: "auto",width: "100%"}} alt="..."/>
+                          <div className="newcard-body">
                               <h6 className="card-title">$2,999</h6>
                           </div>
                       </div>
-                      <div className="card border p-1" style="width: 9rem;margin-right: 3px;"> <img src="img/revolt-164_6wVEHfI-unsplash-removebg-preview.png" className="card-img-top" alt="..."/>
-                          <div className="card-body">
+                      <div className="newcard border p-1" style={{width: "9rem", marginRight: "3px"}}> <img src="img/revolt-164_6wVEHfI-unsplash-removebg-preview.png" className="new-img-top" style={{display: "block",height: "auto",width: "100%"}} alt="..."/>
+                          <div className="newcard-body">
                               <h6 className="card-title">$3,999</h6>
                           </div>
                       </div>
-                      <div className="card border p-1" style="width: 9rem;"> <img src="img/linda-xu-fUEP0djb1hA-unsplash-removebg-preview.png" className="card-img-top" alt="..."/>
-                          <div className="card-body">
+                      <div className="newcard border p-1" style={{width: "9rem"}}> <img src="img/linda-xu-fUEP0djb1hA-unsplash-removebg-preview.png" className="new-img-top" style={{display: "block",height: "auto",width: "100%"}} alt="..."/>
+                          <div className="newcard-body">
                               <h6 className="card-title">$999</h6>
                           </div>
                       </div>
                   </div>
               </div>
               </div>
-          {/* </div>
+         </div>
       </div>
-  </div>
-  </div>; */}
+  </div>;
 };
 
 export default Productdetails;

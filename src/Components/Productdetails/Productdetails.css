@@ -5,7 +5,7 @@ body {
     font-family: "Poppins", sans-serif
 }
 
-.card {
+.newcard {
     background-color: #fff;
     padding: 14px;
     border: none
@@ -28,11 +28,6 @@ li {
     cursor: pointer
 }
 
-img {
-    display: block;
-    height: auto;
-    width: 100%
-}
 
 .stars i {
     color: #f6d151
@@ -230,6 +225,6 @@ label.radio input:checked+span::before {
     left: 4px
 }
 
-.card-body {
+.newcard-body {
     padding: 0.3rem 0.3rem 0.2rem
 }
