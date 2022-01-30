@@ -1,13 +1,16 @@
 import React from 'react';
+import { Dummy } from '../DummyData/Dummy';
 import "./Home.css";
 const Home = () => {
+    console.log(Dummy)
   return<div>
       <nav className="navbar navbar-expand-sm navbar-light bg-white border-bottom"> <a className="navbar-brand ml-2 font-weight-bold" href="#"><span id="burgundy">The</span><span id="orange">Bakeshop</span></a> <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor" aria-controls="navbarColor" aria-expanded="false" aria-label="Toggle navigation"> <span className="navbar-toggler-icon"></span> </button>
         <div className="collapse navbar-collapse" id="navbarColor">
             <ul className="navbar-nav">
                 <li className="nav-item rounded bg-light search-nav-item"><input type="text" id="search" className="bg-light" placeholder="Search bread, cakes, desserts"/><span className="fa fa-search text-muted"></span></li>
-                <li className="nav-item"><a className="nav-link" href="#"><span className="fa fa-user-o"></span><span className="text">Login</span></a> </li>
-                <li className="nav-item "><a className="nav-link" href="#"><span className="fa fa-shopping-cart"></span><span className="text">Cart</span></a> </li>
+                <li className="nav-item"><a className="nav-link" href="#"><span className="fas fa-user"></span><span className="text">Login</span></a> </li>
+                <li className="nav-item "><a className="nav-link" href="#"><span className="fa fa-shopping-cart"></span><span className="text">Cart</span></a></li>
+                
             </ul>
         </div>
     </nav>
@@ -96,8 +99,8 @@ const Home = () => {
             </div>
             <div className="row">
                 <div className="col-lg-4 col-md-6 col-sm-10 offset-md-0 offset-sm-1">
-                    <div className="card"> <img className="card-img-top" src="https://images.pexels.com/photos/1775043/pexels-photo-1775043.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"/>
-                        <div className="card-body">
+                    <div className="cardd"> <img className="card-img-top" src="https://images.pexels.com/photos/1775043/pexels-photo-1775043.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"/>
+                        <div className="card-bodyy">
                             <h5><b>Multi Grain Bread</b> </h5>
                             <div className="d-flex flex-row my-2">
                                 <div className="text-muted">₹110/loaf</div>
@@ -107,8 +110,8 @@ const Home = () => {
                     </div>
                 </div>
                 <div className="col-lg-4 col-md-6 col-sm-10 offset-md-0 offset-sm-1">
-                    <div className="card"> <img className="card-img-top" src="https://images.pexels.com/photos/3085146/pexels-photo-3085146.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"/>
-                        <div className="card-body">
+                    <div className="cardd"> <img className="card-img-top" src="https://images.pexels.com/photos/3085146/pexels-photo-3085146.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"/>
+                        <div className="card-bodyy">
                             <h5><b>Bagels</b> </h5>
                             <div className="d-flex flex-row my-2">
                                 <div className="text-muted">₹35/piece</div>
@@ -118,8 +121,8 @@ const Home = () => {
                     </div>
                 </div>
                 <div className="col-lg-4 col-md-6 col-sm-10 offset-md-0 offset-sm-1">
-                    <div className="card"> <img className="card-img-top" src="https://images.pexels.com/photos/1448665/pexels-photo-1448665.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"/>
-                        <div className="card-body">
+                    <div className="cardd"> <img className="card-img-top" src="https://images.pexels.com/photos/1448665/pexels-photo-1448665.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"/>
+                        <div className="card-bodyy">
                             <h5><b>White Bread</b> </h5>
                             <div className="d-flex flex-row my-2">
                                 <div className="text-muted">₹80/loaf</div>
@@ -129,8 +132,8 @@ const Home = () => {
                     </div>
                 </div>
                 <div className="col-lg-4 col-md-6 col-sm-10 offset-md-0 offset-sm-1">
-                    <div className="card"> <img className="card-img-top" src="https://images.pexels.com/photos/461060/pexels-photo-461060.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"/>
-                        <div className="card-body">
+                    <div className="cardd"> <img className="card-img-top" src="https://images.pexels.com/photos/461060/pexels-photo-461060.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"/>
+                        <div className="card-bodyy">
                             <h5><b>Baguette</b> </h5>
                             <div className="d-flex flex-row my-2">
                                 <div className="text-muted">₹160/piece</div>
@@ -140,8 +143,8 @@ const Home = () => {
                     </div>
                 </div>
                 <div className="col-lg-4 col-md-6 col-sm-10 offset-md-0 offset-sm-1">
-                    <div className="card"> <img className="card-img-top" src="https://images.pexels.com/photos/209206/pexels-photo-209206.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"/>
-                        <div className="card-body">
+                    <div className="cardd"> <img className="card-img-top" src="https://images.pexels.com/photos/209206/pexels-photo-209206.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"/>
+                        <div className="card-bodyy">
                             <h5><b>Masala Bun</b> </h5>
                             <div className="d-flex flex-row my-2">
                                 <div className="text-muted">₹85/piece</div>
@@ -151,8 +154,8 @@ const Home = () => {
                     </div>
                 </div>
                 <div className="col-lg-4 col-md-6 col-sm-10 offset-md-0 offset-sm-1">
-                    <div className="card d-relative"> <img className="card-img-top" src="https://images.pexels.com/photos/3570/morning-breakfast-croissant.jpg?auto=compress&cs=tinysrgb&dpr=1&w=500"/>
-                        <div className="card-body">
+                    <div className="cardd d-relative"> <img className="card-img-top" src="https://images.pexels.com/photos/3570/morning-breakfast-croissant.jpg?auto=compress&cs=tinysrgb&dpr=1&w=500"/>
+                        <div className="card-bodyy">
                             <h5><b>Croissant</b> </h5>
                             <div className="rounded bg-white discount" id="orange">10% off</div>
                             <div className="d-flex flex-row my-2">

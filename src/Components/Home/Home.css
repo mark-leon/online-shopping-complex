@@ -1,6 +1,6 @@
-* {
+/* * {
     box-sizing: border-box
-}
+} */
 
 #search {
     outline: none;
@@ -71,7 +71,7 @@ h6 {
     background-color: orange
 }
 
-.card-body {
+.card-bodyy {
     padding: 8px
 }
 
@@ -127,7 +127,7 @@ h6 {
         float: right
     }
 
-    .card {
+    .cardd {
         width: 300px;
         height: 330px;
         border: none
@@ -182,7 +182,7 @@ h6 {
         float: right
     }
 
-    .card {
+    .cardd {
         width: 200px;
         height: 330px;
         border: none
@@ -246,7 +246,7 @@ h6 {
         float: right
     }
 
-    .card {
+    .cardd {
         border: none
     }
 
@@ -290,7 +290,7 @@ h6 {
         float: right
     }
 
-    .card {
+    .cardd {
         border: none
     }
 
