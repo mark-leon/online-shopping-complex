@@ -54,6 +54,9 @@ label {
 h6 {
     margin-bottom: 0px
 }
+.item {
+    margin-left: 22px
+}
 
 #sort {
     outline: none;

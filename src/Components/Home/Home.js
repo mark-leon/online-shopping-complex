@@ -11,7 +11,7 @@ const Home = () => {
                 <li className="nav-item rounded bg-light search-nav-item"><input type="text" id="search" className="bg-light" placeholder="Search shoes, tshirts, bags"/><span className="fa fa-search text-muted"></span></li>
                 <li className="nav-item"><a className="nav-link" href="#"><span className="fas fa-user"></span><span className="text">Login</span></a> </li>
                 <li className="nav-item "><a className="nav-link" href="#"><span className="fa fa-shopping-cart"></span><span className="text">Cart</span></a></li>
-                
+                <span className= "item">1</span>
             </ul>
         </div>
     </nav>
@@ -103,7 +103,7 @@ const Home = () => {
                 return <div className="col-lg-4 col-md-6 col-sm-10 offset-md-0 offset-sm-1"><Link to={`/product/${c.id}`}></Link>
                     <div className="cardd"><img className="card-img-top" src={c.image}/>
                         <div className="card-bodyy">
-                            <h5><Link to={`product/${c.id}`}><b>{c.text}</b></Link> </h5>
+                            <h5><Link to={`product/id`}><b>{c.text}</b></Link> </h5>
                             <div className="d-flex flex-row my-2">
                                 <div className="text-muted">{c.price}</div>
                                 <div className="ml-auto"> <button className="border rounded bg-white sign"><span className="fa fa-plus" id="orange"></span></button> <span className="px-sm-1">1 piece</span> <button className="border rounded bg-white sign"><span className="fa fa-minus" id="orange"></span></button> </div>
