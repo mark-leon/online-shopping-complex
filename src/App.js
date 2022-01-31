@@ -9,6 +9,7 @@ import Home from "./Components/Home/Home";
 import Login from "./Components/Login/Login";
 import Payment from "./Components/Payment/Payment";
 import Productdetails from "./Components/Productdetails/Productdetails";
+import Product from "./Components/Products/Product";
 import Signup from "./Components/Sign up/Signup";
 
 
@@ -24,7 +25,8 @@ function App() {
         <Route path="login" element={<Login/>} />  
         <Route path="cart" element={<Cart/>} />
         <Route path="empty" element={<Emptycart/>} /> 
-        <Route path="payment" element={<Payment/>} />  
+        <Route path="payment" element={<Payment/>} />
+        <Route path="product" element={<Product/>} />  
       </Routes>
       </BrowserRouter>,
     </div>

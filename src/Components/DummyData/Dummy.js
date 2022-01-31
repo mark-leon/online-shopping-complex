@@ -38,6 +38,7 @@ export const Dummy = [
   { 
     id:7,
     image:"img/kristian-egelund-vJgJLzWmXDA-unsplash-removebg-preview.png",
+    text:"Apex",
     price:"35$",
   }, 
   { 
