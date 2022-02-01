@@ -1,7 +1,15 @@
 import React from 'react';
 import { Dummy } from '../DummyData/Dummy';
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 import "./Home.css";
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  Outlet,
+  Link
+} from "react-router-dom";
+import Productdetails from "../Productdetails/Productdetails";
 
 const Home = () => {
   return<div>
@@ -115,6 +123,9 @@ const Home = () => {
             </div>
         </div>
     </section>
+    <Routes>
+        <Route path="id" element={<Productdetails />} />
+    </Routes>
   </div>;
 };
 
