@@ -26,8 +26,8 @@ function App() {
         <Route path="cart" element={<Cart/>} />
         <Route path="empty" element={<Emptycart/>} /> 
         <Route path="payment" element={<Payment/>} />
-        {/* <Route path="product" element={<Product/>} />
-          <Route path=":id" element={<Productdetails />} /> */}
+        <Route path="product" element={<Product/>} />
+          <Route path=":id" element={<Productdetails />} /> 
       </Routes>
       </BrowserRouter>,
     </div>

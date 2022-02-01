@@ -20,7 +20,8 @@ const Product = () => {
   {/* <Routes>
         <Route path="id" element={<Productdetails/>} />
   </Routes> */}
-  <h1>Hello</h1>
+  {/* <h1>p</h1> */}
+  <Productdetails></Productdetails>
   {/* <h1>{filteredproduct[0].text}</h1> */}
   
   {/* <Productdetails src={filteredproduct.image} name={filteredproduct.text} price={filteredproduct.price} ></Productdetails>     */}

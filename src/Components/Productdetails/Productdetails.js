@@ -124,7 +124,7 @@
 import React from 'react';
 
 const Productdetails = () => {
-  return <div><h1>Hello</h1></div>;
+  return <div><h1>Hello Maal</h1></div>;
 };
 
 export default Productdetails;
