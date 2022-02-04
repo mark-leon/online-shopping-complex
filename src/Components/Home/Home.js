@@ -1,5 +1,6 @@
 import React from 'react';
 import { Dummy } from '../DummyData/Dummy';
+import { connect } from "react-redux";
 // import { Link } from "react-router-dom";
 import "./Home.css";
 import {
@@ -11,18 +12,9 @@ import {
 } from "react-router-dom";
 import Productdetails from "../Productdetails/Productdetails";
 
-const Home = () => {
+const Home = (products) => {
+    console.log(products.products)
   return<div>
-      <nav className="navbar navbar-expand-sm navbar-light bg-white border-bottom"> <a className="navbar-brand ml-2 font-weight-bold" href="#"><span id="burgundy">Shopping Complex</span></a> <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor" aria-controls="navbarColor" aria-expanded="false" aria-label="Toggle navigation"> <span className="navbar-toggler-icon"></span> </button>
-        <div className="collapse navbar-collapse" id="navbarColor">
-            <ul className="navbar-nav">
-                <li className="nav-item rounded bg-light search-nav-item"><input type="text" id="search" className="bg-light" placeholder="Search shoes, tshirts, bags"/><span className="fa fa-search text-muted"></span></li>
-                <li className="nav-item"><a className="nav-link" href="#"><span className="fas fa-user"></span><span className="text">Login</span></a> </li>
-                <li className="nav-item "><a className="nav-link" href="#"><span className="fa fa-shopping-cart"></span><span className="text">Cart</span></a></li>
-                <span className= "item">1</span>
-            </ul>
-        </div>
-    </nav>
     <div className="filter"> <button className="btn btn-default" type="button" data-toggle="collapse" data-target="#mobile-filter" aria-expanded="true" aria-controls="mobile-filter">Filters<span className="fa fa-filter pl-1"></span></button>
     </div>
     <div id="mobile-filter">
@@ -107,7 +99,7 @@ const Home = () => {
                 </div>
             </div>
             <div className="row">
-            {Dummy.map((c)=>{
+            {products.products.map((c)=>{
                 return <div className="col-lg-4 col-md-6 col-sm-10 offset-md-0 offset-sm-1"><Link to={`/product/${c.id}`}></Link>
                     <div className="cardd"><img className="card-img-top" src={c.image}/>
                         <div className="card-bodyy">
@@ -123,10 +115,18 @@ const Home = () => {
             </div>
         </div>
     </section>
-    <Routes>
+    {/* <Routes>
         <Route path="id" element={<Productdetails />} />
-    </Routes>
+    </Routes> */}
   </div>;
 };
 
-export default Home;
+
+const mapStateToProps = (state) => {
+    return {
+      products: state.shop.products,
+    };
+};
+  
+export default connect(mapStateToProps)(Home);
+
