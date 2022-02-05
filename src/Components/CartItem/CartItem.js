@@ -6,13 +6,14 @@ import {
 } from "../../redux/Shopping/shopping-actions";
 
 
-const CartItem = ({item,adjustItemQty,removeFromCart}) => {
-    // const [input, setInput] = useState(item.qty);
+const CartItem = ({item,adjustQty,removeFromCart}) => {
+    console.log(item.qty)
+    const [input, setInput] = useState(item.qty);
 
-    // const onChangeHandler = (e) => {
-    //   setInput(e.target.value);
-    //   adjustQty(item.id, e.target.value);
-    // };    
+    const onChangeHandler = (e) => {
+      setInput(e.target.value);
+      adjustQty(item.id, e.target.value);
+    };    
 
   return <div className="d-flex flex-row justify-content-between align-items-center pt-lg-4 pt-2 pb-3 border-bottom mobile">
   <div className="d-flex flex-row align-items-center">
@@ -27,8 +28,9 @@ const CartItem = ({item,adjustItemQty,removeFromCart}) => {
       </div>
   </div>
   <div className="pl-md-0 pl-1"><b>${item.price}</b></div>
-  <div className="pl-md-0 pl-2"> <span className="fa fa-minus-square text-secondary"></span><span className="px-md-3 px-1">2</span><span className="fa fa-plus-square text-secondary"></span> </div>
-  <div className="pl-md-0 pl-1"><b>$19.98</b></div>
+  <input min="1" style={{width:"10%"}} type="number" id="qty" name="qty" value={input} onChange={onChangeHandler}></input>
+  {/* <div className="pl-md-0 pl-2"> <span className="fa fa-minus-square text-secondary"></span><span className="px-md-3 px-1">{item.qty}</span><span className="fa fa-plus-square text-secondary"></span> </div> */}
+  <div className="pl-md-0 pl-1"><b>${item.price}</b></div>
   <div className="close" onClick={() => removeFromCart(item.id)}>&times;</div> 
 </div>;
 };
@@ -38,7 +40,7 @@ const CartItem = ({item,adjustItemQty,removeFromCart}) => {
 
 const mapDispatchToProps = (dispatch) => {
     return {
-    //   adjustQty: (id, value) => dispatch(adjustItemQty(id, value)),
+      adjustQty: (id, value) => dispatch(adjustItemQty(id, value)),
       removeFromCart: (id) => dispatch(removeFromCart(id)),
     };
 };

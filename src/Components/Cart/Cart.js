@@ -1,10 +1,10 @@
 import React, {useState,useEffect} from 'react';
+import { Link } from 'react-router-dom';
 import "./Cart.css";
 import { connect } from "react-redux";
 import CartItem from '../CartItem/CartItem';
 
-const Cart = ({cart}) => {
-    console.log(cart)
+const Cart = ({cart}) => { 
     const [totalPrice, setTotalPrice] = useState(0);
     const [totalItems, setTotalItems] = useState(0);
 
@@ -35,7 +35,7 @@ const Cart = ({cart}) => {
               <div>
                   <h5 className="text-uppercase font-weight-normal">shopping bag</h5>
               </div>
-              <div className="font-weight-normal">2 items</div>
+              <div className="font-weight-normal">{cart.length} items</div>
           </div>
           <div className="d-flex flex-row px-lg-5 mx-lg-5 mobile" id="heading">
               <div className="px-lg-5 mr-lg-5" id="produc">PRODUCTS</div>
@@ -53,7 +53,7 @@ const Cart = ({cart}) => {
   <div className="row d-flex justify-content-center">
       <div className="col-lg-10 col-12">
           <div className="d-flex justify-content-between align-items-center">
-              <div> <button className="btn btn-sm bg-light border border-dark">GO BACK</button> </div>
+              <div> <Link to="/"><button className="btn btn-sm bg-light border border-dark">GO BACK</button></Link> </div>
               <div className="px-md-0 px-1" id="footer-font"> <b className="pl-md-4">SUBTOTAL<span className="pl-md-4">${totalPrice}</span></b> </div>
               <div> <button className="btn btn-sm bg-dark text-white px-lg-5 px-3">CONTINUE</button> </div>
           </div>
