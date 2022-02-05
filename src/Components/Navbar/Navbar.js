@@ -1,4 +1,5 @@
 import React,{useState,useEffect} from 'react';
+import { Link } from "react-router-dom";
 import "./Navbar.css";
 import { connect } from "react-redux";
 
@@ -20,7 +21,7 @@ const Navbar = ({cart}) => {
       <ul className="navbar-nav">
           <li className="nav-item rounded bg-light search-nav-item"><input type="text" id="search" className="bg-light" placeholder="Search shoes, tshirts, bags"/><span className="fa fa-search text-muted"></span></li>
           <li className="nav-item"><a className="nav-link" href="#"><span className="fas fa-user"></span><span className="text">Login</span></a> </li>
-          <li className="nav-item "><a className="nav-link" href="#"><span className="fa fa-shopping-cart"></span><span className="text">Cart</span></a></li>
+          <li className="nav-item "><Link className="nav-link" to="/cart"><span className="fa fa-shopping-cart"></span><span className="text">Cart</span></Link></li>
           <span className= "item">{cartCount}</span>
       </ul>
   </div>
