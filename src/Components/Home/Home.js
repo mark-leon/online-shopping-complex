@@ -1,19 +1,10 @@
 import React from 'react';
-import { Dummy } from '../DummyData/Dummy';
 import { connect } from "react-redux";
-// import { Link } from "react-router-dom";
 import "./Home.css";
-import {
-  BrowserRouter as Router,
-  Routes,
-  Route,
-  Outlet,
-  Link
-} from "react-router-dom";
-import Productdetails from "../Productdetails/Productdetails";
+import Product from '../Products/Product';
 
-const Home = (products) => {
-    console.log(products.products)
+const Home = ({products}) => {
+    //console.log(products)
   return<div>
     <div className="filter"> <button className="btn btn-default" type="button" data-toggle="collapse" data-target="#mobile-filter" aria-expanded="true" aria-controls="mobile-filter">Filters<span className="fa fa-filter pl-1"></span></button>
     </div>
@@ -89,7 +80,7 @@ const Home = (products) => {
     <section id="products">
         <div className="container">
             <div className="d-flex flex-row">
-                <div className="text-muted m-2" id="res">Showing {Dummy.length} results</div>
+                <div className="text-muted m-2" id="res">Showing {products.length} results</div>
                 <div className="ml-auto mr-lg-4">
                     <div id="sorting" className="border rounded p-1 m-1"> <span className="text-muted">Sort by</span> <select name="sort" id="sort">
                             <option value="popularity"><b>Popularity</b></option>
@@ -99,25 +90,12 @@ const Home = (products) => {
                 </div>
             </div>
             <div className="row">
-            {products.products.map((c)=>{
-                return <div className="col-lg-4 col-md-6 col-sm-10 offset-md-0 offset-sm-1"><Link to={`/product/${c.id}`}></Link>
-                    <div className="cardd"><img className="card-img-top" src={c.image}/>
-                        <div className="card-bodyy">
-                            <h5><Link to={`/product/${c.id}`}><b>{c.text}</b></Link> </h5>
-                            <div className="d-flex flex-row my-2">
-                                <div className="text-muted">{c.price}</div>
-                                <div className="ml-auto"> <button className="border rounded bg-white sign"><span className="fa fa-plus" id="orange"></span></button> <span className="px-sm-1">1 piece</span> <button className="border rounded bg-white sign"><span className="fa fa-minus" id="orange"></span></button> </div>
-                            </div> <button className="btn w-100 rounded my-2">Add to cart</button>
-                        </div>
-                    </div>
-                </div>
-                })}
+            {products.map((product) => {
+                return <Product key={product.id} product={product} />
+            })}
             </div>
         </div>
     </section>
-    {/* <Routes>
-        <Route path="id" element={<Productdetails />} />
-    </Routes> */}
   </div>;
 };
 
