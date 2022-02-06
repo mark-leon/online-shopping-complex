@@ -12,6 +12,7 @@ import Payment from "./Components/Payment/Payment";
 import Productdetails from "./Components/Productdetails/Productdetails";
 import Product from "./Components/Products/Product";
 import Signup from "./Components/Sign up/Signup";
+import Stripe from "./Components/Stripe/Stripe";
 
 
 
@@ -28,6 +29,8 @@ function App() {
         <Route path="cart" element={<Cart/>} />
         <Route path="empty" element={<Emptycart/>} /> 
         <Route path="payment" element={<Payment/>} />
+        <Route path="stripe" element={<Stripe/>} />
+
         {/* <Route path="/product/*" element={<Home/>} /> */}
           {/* <Route path=":id" element={<Productdetails />} />  */}
       </Routes>

@@ -1,4 +1,4 @@
-import React, {useState,useEffect} from 'react';
+import React, {useState, useEffect} from 'react';
 import { Link } from 'react-router-dom';
 import "./Cart.css";
 import { connect } from "react-redux";
@@ -21,7 +21,7 @@ const Cart = ({cart}) => {
         setTotalPrice(price);
     }, [cart, totalPrice, totalItems, setTotalPrice, setTotalItems]);
 
-  return <div><div className="container bg-white rounded-top mt-5" id="zero-pad">
+  return <div> <div className="container bg-white rounded-top mt-5" id="zero-pad">
   <div className="row d-flex justify-content-center">
       <div className="col-lg-10 col-12 pt-3">
           <div className="d-flex">
@@ -55,7 +55,7 @@ const Cart = ({cart}) => {
           <div className="d-flex justify-content-between align-items-center">
               <div> <Link to="/"><button className="btn btn-sm bg-light border border-dark">GO BACK</button></Link> </div>
               <div className="px-md-0 px-1" id="footer-font"> <b className="pl-md-4">SUBTOTAL<span className="pl-md-4">${totalPrice}</span></b> </div>
-              <div> <button className="btn btn-sm bg-dark text-white px-lg-5 px-3">CONTINUE</button> </div>
+              <div><Link to="/payment"> <button className="btn btn-sm bg-dark text-white px-lg-5 px-3">CONTINUE</button></Link> </div>
           </div>
       </div>
   </div>

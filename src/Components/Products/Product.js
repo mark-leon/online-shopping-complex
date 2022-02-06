@@ -1,8 +1,6 @@
 import React from 'react';
 import { connect } from "react-redux";
-// import {
-//   addToCart,
-// } from "../../../redux/Shopping/shopping-actions";
+
 
 import {
   addToCart,
@@ -18,17 +16,16 @@ const Product = ({product,addToCart}) => {
               <div className="text-muted">${product.price}</div>
               <div className="ml-auto"> <button className="border rounded bg-white sign"><span className="fa fa-plus" id="orange"></span></button> <span className="px-sm-1">1 piece</span> <button className="border rounded bg-white sign"><span className="fa fa-minus" id="orange"></span></button> </div>
           </div> <button onClick={() => addToCart(product.id)}  className="btn w-100 rounded my-2">Add to cart</button>
+      
       </div>
   </div>
 </div>;
 };
 
-//export default Product;
 
 const mapDispatchToProps = (dispatch) => {
   return {
     addToCart: (id) => dispatch(addToCart(id)),
-
   };
 };
 
