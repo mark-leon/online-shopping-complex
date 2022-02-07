@@ -44,6 +44,6 @@ const mapDispatchToProps = (dispatch) => {
       removeFromCart: (id) => dispatch(removeFromCart(id)),
     };
 };
-  
+
 export default connect(null, mapDispatchToProps)(CartItem);
 

@@ -3,10 +3,36 @@ import { Link } from 'react-router-dom';
 import "./Cart.css";
 import { connect } from "react-redux";
 import CartItem from '../CartItem/CartItem';
+import StripeCheckout from "react-stripe-checkout";
+import axios from "axios";
+import { toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+toast.configure();
 
 const Cart = ({cart}) => { 
     const [totalPrice, setTotalPrice] = useState(0);
     const [totalItems, setTotalItems] = useState(0);
+
+
+    let cartItems = [];
+    cart.forEach((item) => {
+        cartItems += item.text+" ";
+    }); 
+
+    async function handleToken(token, addresses) {
+        const response = await axios.post(
+          "/checkout",
+          { token,totalPrice,cartItems}
+        );
+        const { status } = response.data;
+        console.log("Response:", response.data);
+        if (status === "success") {
+          toast("Success! Check email for details", { type: "success" });
+        } else {
+          toast("Something went wrong", { type: "error" });
+        }
+      }
+    
 
     useEffect(() => {
         let items = 0;
@@ -55,7 +81,15 @@ const Cart = ({cart}) => {
           <div className="d-flex justify-content-between align-items-center">
               <div> <Link to="/"><button className="btn btn-sm bg-light border border-dark">GO BACK</button></Link> </div>
               <div className="px-md-0 px-1" id="footer-font"> <b className="pl-md-4">SUBTOTAL<span className="pl-md-4">${totalPrice}</span></b> </div>
-              <div><Link to="/payment"> <button className="btn btn-sm bg-dark text-white px-lg-5 px-3">CONTINUE</button></Link> </div>
+              <StripeCheckout
+                 stripeKey="pk_test_51KQCoWBW0vi5VLWliCckqu2wXavroh4VLshlw4lcfg51ya5CFc2UPbBtlQP6aPmjOgi2S08nrrYHbpXf9cFo17CJ00Qtdai0pa"
+                 token={handleToken}
+                 amount={totalPrice * 100}
+                 name={cartItems}
+                 billingAddress
+                 shippingAddress
+              />
+              {/* <div><Link to="/payment"> <button className="btn btn-sm bg-dark text-white px-lg-5 px-3">CONTINUE</button></Link> </div> */}
           </div>
       </div>
   </div>
@@ -72,4 +106,6 @@ const mapStateToProps = (state) => {
   };
   
 export default connect(mapStateToProps)(Cart);
+
+
 

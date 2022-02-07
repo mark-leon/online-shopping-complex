@@ -4,9 +4,11 @@ import axios from "axios";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import "./Stripe.css";
+import { connect } from "react-redux";
 toast.configure();
 
-const Stripe = () => {
+const Stripe = ({cart}) => {
+    console.log(cart)
     const [product] = React.useState({
         name: "Tesla Roadster",
         price: 64998.67,
@@ -45,4 +47,13 @@ const Stripe = () => {
         </div>
       );
     }
-export default Stripe;
+
+
+const mapStateToProps = (state) => {
+    return {
+        cart: state.shop.cart,
+    };
+};
+
+export default connect(mapStateToProps)(Stripe);
+// export default Stripe;
